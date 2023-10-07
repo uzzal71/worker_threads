@@ -4,7 +4,7 @@
   "description": "``` sysctl -n hw.ncpu ``` # Machine core view for Linux  ``` nproc ``` # Machine core view for Windows  ``` echo \"NUMBER_OF_PROCESSORS% ```",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ,/index.js"
   },
   "repository": {
     "type": "git",

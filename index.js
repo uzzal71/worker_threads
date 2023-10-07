@@ -1,4 +1,5 @@
 const express = require("express")
+const { Worker } = require("worker_threads")
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -8,11 +9,14 @@ app.get("/non-blocking", (req, res) => {
 });
 
 app.get("/blocking", (req, res) => {
-    let result = 0;
-    for (let i = 0; i < 100000; i++) {
-        result += i        
-    }
-    res.status(200).send(`Result is ${result}`);
+    const worker = new Worker("./worker.js")
+    worker.on("message", (data) => {
+        res.status(200).send(`Result is ${result}`);
+    })
+
+    worker.on("error", (error) => {
+        res.status(400).send(`An error occured${error}`);
+    })
 });
 
 app.listen(port, ()=> {
