@@ -1,0 +1,26 @@
+{
+  "name": "worker_threads",
+  "version": "1.0.0",
+  "description": "``` sysctl -n hw.ncpu ``` # Machine core view for Linux  ``` nproc ``` # Machine core view for Windows  ``` echo \"NUMBER_OF_PROCESSORS% ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/uzzal71/worker_threads.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzzal71/worker_threads/issues"
+  },
+  "homepage": "https://github.com/uzzal71/worker_threads#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
