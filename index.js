@@ -11,7 +11,7 @@ app.get("/non-blocking", (req, res) => {
 app.get("/blocking", (req, res) => {
     const worker = new Worker("./worker.js")
     worker.on("message", (data) => {
-        res.status(200).send(`Result is ${result}`);
+        res.status(200).send(`Result is ${data}`);
     })
 
     worker.on("error", (error) => {
