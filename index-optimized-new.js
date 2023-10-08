@@ -43,6 +43,7 @@ app.get("/blocking", async (req, res) => {
     res.status(200).send(`Result is ${total}`);
 });
 
+// create a nodejs server
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });
