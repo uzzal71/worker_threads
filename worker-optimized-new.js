@@ -1,3 +1,4 @@
+// create worker separate file
 const { parentPort } = require("worker_threads")
 
 let result = 0;
